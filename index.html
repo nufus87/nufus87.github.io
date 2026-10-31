@@ -3,215 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="description"
+      content="Personal page of Nufus"
+    />
+    <title>Alejandro | Web Developer</title>
 
-    <title>Personal Page Nufus</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap"
     />
-
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css"
     />
 
-    <style>
-      body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      main {
-        flex: 1;
-        display: flex;
-        align-items: center;
-      }
-
-      .hero {
-        width: 100%;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-      }
-
-      .hero .greeting {
-        margin-bottom: 7rem;
-        font-size: 2rem;
-        font-weight: 300;
-      }
-
-      .hero .intro {
-        max-width: 680px;
-        margin: 0;
-        font-size: clamp(2rem, 3vw, 2.5rem);
-        line-height: 1.4;
-        font-weight: 300;
-      }
-
-      .hero .intro strong {
-        color: var(--pico-primary);
-      }
-
-      .contact {
-        margin-top: 7rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-weight: 600;
-      }
-
-      .contact a {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        text-decoration: none;
-      }
-
-      footer {
-        border-top: 1px solid var(--pico-muted-border-color);
-      }
-
-      .footer-inner {
-        min-height: 110px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-      }
-
-      .credit {
-        margin: 0;
-        font-size: 0.85rem;
-        line-height: 1.6;
-      }
-
-      .credit a,
-      .social a {
-        text-decoration: none;
-      }
-
-      .social {
-        display: flex;
-        align-items: center;
-        gap: 1.75rem;
-      }
-
-      .social a {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-      }
-
-      .social i {
-        font-size: 1rem;
-      }
-
-      @media (max-width: 700px) {
-        .hero {
-          padding-top: 5rem;
-          padding-bottom: 6rem;
-        }
-
-        .hero .greeting {
-          margin-bottom: 4rem;
-        }
-
-        .contact {
-          margin-top: 4rem;
-        }
-
-        .footer-inner {
-          padding-top: 2rem;
-          padding-bottom: 2rem;
-          align-items: flex-start;
-          flex-direction: column;
-        }
-
-        .social {
-          flex-wrap: wrap;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <main>
-      <section class="container hero">
-        <p class="greeting">Hello! 👋</p>
-
-        <p class="intro">
-          I'm <strong>Nufus</strong>, a tourism student and enthusiast with an
-          interest in destination marketing, management, and development 🌴
+      <section class="intro">
+        <p class="intro__hello">
+          Hello!
+          <span aria-hidden="true">👋</span>
         </p>
 
-        <div class="contact">
-          <span>Let's connect on</span>
+        <h1 class="intro__tagline">
+          I'm <span class="name">Nufus</span>, a tourism student and enthusiast with an interest in destination marketing, management, and development
+          <span aria-hidden="true">🌴</span>
+        </h1>
 
+        <p class="intro__contact">
+          Let's connect on
           <a
+            class="btn"
             href="https://www.linkedin.com/in/nufuszs/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="bi bi-linkedin"></i>
             LinkedIn
+            <span class="btn__arrow" aria-hidden="true"
+              ><i class="bi bi-arrow-right"></i
+            ></span>
           </a>
-        </div>
+        </p>
       </section>
     </main>
 
-    <footer>
-      <div class="container footer-inner">
-        <div class="credit">
-          <div>
-            Made with ☕ by
-            <a href="https://github.com/nufus87"> nfz </a>
-          </div>
+    <footer class="footer">
+      <p class="footer__copyright">
+        Made with <span aria-hidden="true">☕</span> by
+        <a
+          href="https://github.com/nufus87/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >nfz</a
+        ><br />
+        Inspired by
+        <a
+          href="https://bchiang7.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Brittany Chiang</a
+        >
+      </p>
 
-          <div>
-            Inspired by
+      <nav aria-label="Social media">
+        <ul class="footer__links">
+          <li>
             <a
-              href="https://bchiang7.github.io/"
+              href="https://www.instagram.com/nufuszs/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Brittany Chiang
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
             </a>
-          </div>
-        </div>
-
-        <nav class="social">
-          <a
-            href="https://www.instagram.com/nufuszs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="bi bi-instagram"></i>
-            Instagram
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/nufuszs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="bi bi-linkedin"></i>
-            LinkedIn
-          </a>
-
-          <a
-            href="https://t.me/nufuszs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="bi bi-telegram"></i>
-            Telegram
-          </a>
-        </nav>
-      </div>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/nufuszs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://t.me/nufuszs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-telegram" aria-hidden="true"></i>
+              <span>Telegram</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
+
   </body>
 </html>
